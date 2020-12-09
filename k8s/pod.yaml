@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: blazor-unicorn-k8s-pod
+  labels:
+    app.kubernetes.io/name: blazor-unicorn-k8s-pod
+    app.kubernetes.io/instance: blazor-unicorn-pod
+spec:
+  containers:
+  - name: blazor-unicorn-k8s-pod
+    image: jetersen/blazor-unicorn:v1.0.0
+    ports:
+      - name: http
+        containerPort: 80
+        protocol: TCP
