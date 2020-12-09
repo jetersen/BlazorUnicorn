@@ -2,3 +2,8 @@ Dockerfile
 out/
 bin/
 obj/
+.idea/
+.vs/
+.github/
+k8s/
+*.md
