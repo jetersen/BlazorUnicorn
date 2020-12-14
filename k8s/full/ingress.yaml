@@ -8,6 +8,11 @@ metadata:
   annotations:
     kubernetes.io/tls-acme: "true"
     kubernetes.io/ingress.class: nginx-public
+    # The annotations below are required for my baremetal cluster
+    # See: https://github.com/jetersen/home.cluster
+    external-dns.alpha.kubernetes.io/target: public-ingress.jetersen.dev
+    external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
+    # if your cluster is running in public cloud you can avoid using these.
 spec:
   tls:
     - hosts:
